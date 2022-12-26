@@ -13,6 +13,7 @@ namespace WF_Aworkplace.Data
     {
         IList getReaders();
         void RegisterData(ListView lw, string path);
+        void RegisterDataLiterature(ListView lw, string path);
         int getNextId(string path);
         int getNextIdCard(string path);
         IList getLiterature(string path);

@@ -15,7 +15,7 @@ namespace WF_Aworkplace.Model
             get => idType;
             set
             {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 idType = value;
@@ -27,12 +27,26 @@ namespace WF_Aworkplace.Model
             get => nameType;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 nameType = value;
             }
         }
+
+        internal protected string issuesPublish { get; protected set; }
+        public string IssuesPublish
+        {
+            get => issuesPublish;
+            set
+            {
+                if (!value.GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
+                if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
+                issuesPublish = value;
+            }
+        }
+
 
         public TypeLiterature():base() { }
         ~TypeLiterature() { }
@@ -43,10 +57,11 @@ namespace WF_Aworkplace.Model
             NameType = nameType;
         }
 
-        public TypeLiterature(int id, string author, string title,int numInstance, DateTime dateoutput,int idType, string nameType) : base(id, author, title, numInstance, dateoutput)
+        public TypeLiterature(int id, string author, string title,int numInstance, DateTime dateoutput,int idType, string nameType, string publish) : base(id, author, title, numInstance, dateoutput)
         {
             IDTYPE = idType;
             NameType = nameType;
+            IssuesPublish = publish;
         }
 
         public static string pathTypeLiterature = "../../../WF_Aworkplace.Data/Files/TypeLiterature.txt";

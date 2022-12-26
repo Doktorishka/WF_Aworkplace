@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListLiteratureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLiteratureView.Designer.cs">
+      <DependentUpon>ListLiteratureView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListReaderView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     <Compile Include="StartedForm.Designer.cs">
       <DependentUpon>StartedForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ListLiteratureView.resx">
+      <DependentUpon>ListLiteratureView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListReaderView.resx">
       <DependentUpon>ListReaderView.cs</DependentUpon>
     </EmbeddedResource>

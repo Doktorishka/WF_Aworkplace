@@ -19,15 +19,14 @@ namespace WF_Aworkplace.Controller.Interfaces
         bool isIdValidation(int id);
 
         int ID { get; set; }
-        int IDCard { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string Patronymic { get; set; }
-        DateTime DateBirth { get; set; }
+        string Author { get; set; }
+        string Title { get; set; }
+        int NumInstance { get; set; }
+        DateTime DateOutput { get; set; }
+        bool isModify { set; }
         int IDTYPE { get; set; }
         string NameType { get; set; }
-        string PlaceReader { get; set; }
-        bool isModify { set; }
+        string IssuesPublish { get; set; }
 
         Dictionary<int, string> getType(string path);
     }

@@ -29,23 +29,35 @@
         private void InitializeComponent()
         {
             this.buttonListReader = new System.Windows.Forms.Button();
+            this.btnListLiterature = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonListReader
             // 
             this.buttonListReader.Location = new System.Drawing.Point(322, 50);
             this.buttonListReader.Name = "buttonListReader";
-            this.buttonListReader.Size = new System.Drawing.Size(75, 23);
+            this.buttonListReader.Size = new System.Drawing.Size(123, 42);
             this.buttonListReader.TabIndex = 0;
             this.buttonListReader.Text = "Список читателей";
             this.buttonListReader.UseVisualStyleBackColor = true;
             this.buttonListReader.Click += new System.EventHandler(this.buttonListReader_Click);
+            // 
+            // btnListLiterature
+            // 
+            this.btnListLiterature.Location = new System.Drawing.Point(161, 50);
+            this.btnListLiterature.Name = "btnListLiterature";
+            this.btnListLiterature.Size = new System.Drawing.Size(123, 42);
+            this.btnListLiterature.TabIndex = 0;
+            this.btnListLiterature.Text = "Список литературы";
+            this.btnListLiterature.UseVisualStyleBackColor = true;
+            this.btnListLiterature.Click += new System.EventHandler(this.btnListLiterature_Click);
             // 
             // StartedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 404);
+            this.Controls.Add(this.btnListLiterature);
             this.Controls.Add(this.buttonListReader);
             this.Name = "StartedForm";
             this.Text = "StartedForm";
@@ -56,5 +68,6 @@
         #endregion
 
         private System.Windows.Forms.Button buttonListReader;
+        private System.Windows.Forms.Button btnListLiterature;
     }
 }

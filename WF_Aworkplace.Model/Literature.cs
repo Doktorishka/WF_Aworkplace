@@ -12,7 +12,7 @@ namespace WF_Aworkplace.Model
         public int ID {
             get => id;
             set {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 id = value;
@@ -24,7 +24,7 @@ namespace WF_Aworkplace.Model
             get => author;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 author = value;
@@ -36,7 +36,7 @@ namespace WF_Aworkplace.Model
             get => title;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 title = value;
@@ -48,7 +48,7 @@ namespace WF_Aworkplace.Model
             get => numInstance;
             set
             {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 numInstance = value;
@@ -60,7 +60,7 @@ namespace WF_Aworkplace.Model
             get => dateOutputLiterature;
             set
             {
-                if (!GetType().Equals(typeof(DateTime))) throw new ArgumentException($"Не соответсвие типов данных! Вместо DateTime - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(DateTime))) throw new ArgumentException($"Не соответсвие типов данных! Вместо DateTime - введено {GetType()}");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 dateOutputLiterature = value;
             }
@@ -74,6 +74,8 @@ namespace WF_Aworkplace.Model
             NumInstance = numInstance;
             DateOutputLiterature = dateOutputLiterature;
         }
+
+        public static string pathLiterature = "../../../WF_Aworkplace.Data/Files/Literature.txt";
 
         ~Literature() { }
 

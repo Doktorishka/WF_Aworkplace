@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WF_Aworkplace.Controller;
+using WF_Aworkplace.Controller.Interfaces;
 using WF_Aworkplace.Data;
+using WF_Aworkplace.Model;
+using WF_Aworkplace.Views;
 
 namespace WF_Aworkplace.View
 {
@@ -28,6 +24,18 @@ namespace WF_Aworkplace.View
             view.Visible= false;
 
             ReaderListController controller = new ReaderListController(view, _readers);
+            controller.LoadView();
+            view.ShowDialog();
+        }
+
+        private void btnListLiterature_Click(object sender, EventArgs e)
+        {
+            ListLiteratureView view = new ListLiteratureView();
+            ReleaseData releaseData = new ReleaseData();
+            IList _literature = releaseData.getLiterature(TypeLiterature.pathTypeLiterature);
+            view.Visible = false;
+
+            LiteratureListController controller = new LiteratureListController(view, _literature);
             controller.LoadView();
             view.ShowDialog();
         }

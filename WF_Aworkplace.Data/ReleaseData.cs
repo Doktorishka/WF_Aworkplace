@@ -20,7 +20,29 @@ namespace WF_Aworkplace.Data
 
         public IList getLiterature(string path)
         {
-            throw new NotImplementedException();
+            IList _literature = new ArrayList();
+            Dictionary<int, string> type = getType(TypeLiterature.pathTypeLiterature);
+            string[] allLiterature = File.ReadAllLines(Literature.pathLiterature);
+
+            foreach (string literatureString in allLiterature)
+            {
+                string[] line = literatureString.Split(';');
+                if (line.Length == 9) { line.Where(x => x != "").ToArray(); }
+                TypeLiterature tl = new TypeLiterature()
+                {
+                    ID = Convert.ToInt32(line[0]),
+                    Author = line[1],
+                    Title = line[2],
+                    NumInstance = Convert.ToInt32(line[3]),
+                    DateOutputLiterature = Convert.ToDateTime(line[4]),
+                    IDTYPE = Convert.ToInt32(line[5]),
+                    NameType = type.FirstOrDefault(x => x.Key == Convert.ToInt32(line[5])).Value,
+                    IssuesPublish = line[6]
+                };
+                _literature.Add(tl);
+
+            }
+            return _literature;
         }
 
         public IList getReaders()
@@ -85,6 +107,28 @@ namespace WF_Aworkplace.Data
                 s += row.SubItems[5].Text + ";";
                 s += key.ToString() + ";";
                 s += row.SubItems[7].Text + ";";
+
+                strings[row.Index] = s.Trim();
+            }
+
+            File.WriteAllLines(path, strings);
+        }
+
+        public void RegisterDataLiterature(ListView lw, string path)
+        {
+            string[] strings = new string[lw.Items.Count];
+            Dictionary<int, string> type = getType(TypeLiterature.pathTypeLiterature);
+            foreach (ListViewItem row in lw.Items)
+            {
+                int key = type.FirstOrDefault(x => x.Value == row.SubItems[5].Text).Key;
+
+                string s = row.Text + ";";
+                s += row.SubItems[1].Text + ";";
+                s += row.SubItems[2].Text + ";";
+                s += row.SubItems[3].Text + ";";
+                s += row.SubItems[4].Text + ";";
+                s += key.ToString() + ";";
+                s += row.SubItems[6].Text + ";";
 
                 strings[row.Index] = s.Trim();
             }
