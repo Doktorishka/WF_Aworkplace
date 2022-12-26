@@ -46,6 +46,7 @@
             this.dataReader.RowHeadersWidth = 51;
             this.dataReader.Size = new System.Drawing.Size(469, 207);
             this.dataReader.TabIndex = 0;
+            this.dataReader.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataReader_CellClick);
             // 
             // dataOutputLiterature
             // 

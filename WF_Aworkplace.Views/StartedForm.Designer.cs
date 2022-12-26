@@ -31,6 +31,7 @@
             this.buttonListReader = new System.Windows.Forms.Button();
             this.btnListLiterature = new System.Windows.Forms.Button();
             this.btnInputLiterature = new System.Windows.Forms.Button();
+            this.outputLiterature = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonListReader
@@ -59,15 +60,26 @@
             this.btnInputLiterature.Name = "btnInputLiterature";
             this.btnInputLiterature.Size = new System.Drawing.Size(123, 42);
             this.btnInputLiterature.TabIndex = 0;
-            this.btnInputLiterature.Text = "Выдать литературу";
+            this.btnInputLiterature.Text = "Принять литературу";
             this.btnInputLiterature.UseVisualStyleBackColor = true;
-            this.btnInputLiterature.Click += new System.EventHandler(this.btnInputLiterature_Click);
+            this.btnInputLiterature.Click += new System.EventHandler(this.buttonListReader_Click);
+            // 
+            // outputLiterature
+            // 
+            this.outputLiterature.Location = new System.Drawing.Point(322, 135);
+            this.outputLiterature.Name = "outputLiterature";
+            this.outputLiterature.Size = new System.Drawing.Size(123, 42);
+            this.outputLiterature.TabIndex = 0;
+            this.outputLiterature.Text = "Выдать литературу";
+            this.outputLiterature.UseVisualStyleBackColor = true;
+            this.outputLiterature.Click += new System.EventHandler(this.outputLiterature_Click);
             // 
             // StartedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 404);
+            this.Controls.Add(this.outputLiterature);
             this.Controls.Add(this.btnInputLiterature);
             this.Controls.Add(this.btnListLiterature);
             this.Controls.Add(this.buttonListReader);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button buttonListReader;
         private System.Windows.Forms.Button btnListLiterature;
         private System.Windows.Forms.Button btnInputLiterature;
+        private System.Windows.Forms.Button outputLiterature;
     }
 }
