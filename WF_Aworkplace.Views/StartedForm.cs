@@ -39,5 +39,23 @@ namespace WF_Aworkplace.View
             controller.LoadView();
             view.ShowDialog();
         }
+
+        private void btnInputLiterature_Click(object sender, EventArgs e)
+        {
+            InputLiteratureView view = new InputLiteratureView();
+
+            ListReaderView view1 = new ListReaderView();
+            ListLiteratureView view2 = new ListLiteratureView();
+
+            ReleaseData releaseData = new ReleaseData();
+
+            IList _literature = releaseData.getLiterature(TypeLiterature.pathTypeLiterature);
+            IList _reader = releaseData.getReaders();
+            view.Visible = false;
+
+            InputLiteratureController controller = new InputLiteratureController(view1,view2, _reader, _literature);
+            controller.LoadView();
+            view.ShowDialog();
+        }
     }
 }

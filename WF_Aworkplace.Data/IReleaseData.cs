@@ -18,5 +18,6 @@ namespace WF_Aworkplace.Data
         int getNextIdCard(string path);
         IList getLiterature(string path);
         Dictionary<int, string> getType(string path);
+        void RegisterInputLiterature(int idL, int idCard, DateTime date);
     }
 }

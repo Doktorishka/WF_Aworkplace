@@ -30,6 +30,7 @@
         {
             this.buttonListReader = new System.Windows.Forms.Button();
             this.btnListLiterature = new System.Windows.Forms.Button();
+            this.btnInputLiterature = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonListReader
@@ -52,11 +53,22 @@
             this.btnListLiterature.UseVisualStyleBackColor = true;
             this.btnListLiterature.Click += new System.EventHandler(this.btnListLiterature_Click);
             // 
+            // btnInputLiterature
+            // 
+            this.btnInputLiterature.Location = new System.Drawing.Point(161, 135);
+            this.btnInputLiterature.Name = "btnInputLiterature";
+            this.btnInputLiterature.Size = new System.Drawing.Size(123, 42);
+            this.btnInputLiterature.TabIndex = 0;
+            this.btnInputLiterature.Text = "Выдать литературу";
+            this.btnInputLiterature.UseVisualStyleBackColor = true;
+            this.btnInputLiterature.Click += new System.EventHandler(this.btnInputLiterature_Click);
+            // 
             // StartedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 404);
+            this.Controls.Add(this.btnInputLiterature);
             this.Controls.Add(this.btnListLiterature);
             this.Controls.Add(this.buttonListReader);
             this.Name = "StartedForm";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button buttonListReader;
         private System.Windows.Forms.Button btnListLiterature;
+        private System.Windows.Forms.Button btnInputLiterature;
     }
 }

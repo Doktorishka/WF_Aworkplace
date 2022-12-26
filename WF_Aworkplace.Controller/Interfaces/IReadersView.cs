@@ -30,6 +30,5 @@ namespace WF_Aworkplace.Controller.Interfaces
         bool isModify { set; }
 
         Dictionary<int, string> getType(string path);
-
     }
 }

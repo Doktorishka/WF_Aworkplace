@@ -165,5 +165,10 @@ namespace WF_Aworkplace.Views
             if (grdLiterature.SelectedItems.Count > 0)
                 this._controller.SelectedLiteratureChanged(Convert.ToInt32(grdLiterature.SelectedItems[0].Text));
         }
+
+        public void SetController(InputLiteratureController inputLiteratureController)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

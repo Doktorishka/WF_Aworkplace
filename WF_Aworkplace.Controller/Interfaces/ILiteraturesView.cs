@@ -29,5 +29,6 @@ namespace WF_Aworkplace.Controller.Interfaces
         string IssuesPublish { get; set; }
 
         Dictionary<int, string> getType(string path);
+        void SetController(InputLiteratureController inputLiteratureController);
     }
 }

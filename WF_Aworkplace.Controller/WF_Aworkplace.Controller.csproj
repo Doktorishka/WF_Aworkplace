@@ -49,10 +49,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Functions.cs" />
+    <Compile Include="Interfaces\IFunctions.cs" />
+    <Compile Include="Interfaces\IInputLiteratureView.cs" />
+    <Compile Include="Interfaces\ILiteratureFromReader.cs" />
     <Compile Include="Interfaces\ILiteraturesView.cs" />
+    <Compile Include="InputLiteratureController.cs" />
     <Compile Include="Interfaces\IReadersView.cs" />
+    <Compile Include="LiteratureFromReader.cs" />
     <Compile Include="LiteratureListController.cs" />
     <Compile Include="ReaderListController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

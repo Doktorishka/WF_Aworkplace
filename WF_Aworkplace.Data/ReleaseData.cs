@@ -135,5 +135,11 @@ namespace WF_Aworkplace.Data
 
             File.WriteAllLines(path, strings);
         }
+
+        public void RegisterInputLiterature(int idL, int idCard, DateTime date)
+        {
+            string s = idL.ToString() +";"+idCard.ToString()+";"+date.ToShortDateString();
+            File.AppendAllText("../../../WF_Aworkplace.Data/Files/OutputLiterature.txt", s);
+        }
     }
 }
