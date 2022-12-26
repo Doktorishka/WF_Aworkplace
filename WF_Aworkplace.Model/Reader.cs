@@ -12,7 +12,7 @@ namespace WF_Aworkplace.Model
         public int ID {
             get => id;
             set {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(Int32))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 id = value;
@@ -24,7 +24,7 @@ namespace WF_Aworkplace.Model
             get => idCard;
             set
             {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(Int32))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 idCard = value;
@@ -34,7 +34,7 @@ namespace WF_Aworkplace.Model
         public string LastName {
             get=>lastName;
             set {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(String))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 lastName = value;  
@@ -46,7 +46,7 @@ namespace WF_Aworkplace.Model
             get => firstName;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(String))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 firstName = value;
@@ -58,7 +58,7 @@ namespace WF_Aworkplace.Model
             get => patronymic;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(String))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 patronymic = value;
             }
@@ -67,12 +67,12 @@ namespace WF_Aworkplace.Model
         public DateTime DateBirth { 
             get => dateBirth;
             set {
-                if (!GetType().Equals(typeof(DateTime))) throw new ArgumentException($"Не соответсвие типов данных! Вместо DateTime - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(DateTime))) throw new ArgumentException($"Не соответсвие типов данных! Вместо DateTime - введено {GetType()}");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 dateBirth = value;
             }
         }
-        public static string pathFileString = "../../../File";
+        public static string pathFileReaderString = "../../../WF_Aworkplace.Data/Files/Readers.txt";
 
         public Reader() { }
         public Reader(int id, int idCard, string lastName, string firstName, string patronymic, DateTime dateBirth)

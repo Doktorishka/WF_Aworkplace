@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WF_Aworkplace.Controller.Interfaces;
+using WF_Aworkplace.Data;
 using WF_Aworkplace.Model;
 
 namespace WF_Aworkplace.Controller
@@ -30,8 +32,11 @@ namespace WF_Aworkplace.Controller
             _view.LastName = reader.LastName;
             _view.FirstName = reader.FirstName;
             _view.DateBirth = reader.DateBirth;
+            _view.Patronymic = reader.Patronymic;
             _view.IDTYPE = reader.IDTYPE;
             _view.NameType = reader.NameType;
+            _view.PlaceReader = reader.PlaceReader;
+
         }
 
         private void updateReaderWithViewValues(TypeReader reader) {
@@ -40,8 +45,10 @@ namespace WF_Aworkplace.Controller
             reader.LastName = _view.LastName;
             reader.FirstName = _view.FirstName;
             reader.DateBirth = _view.DateBirth;
+            reader.Patronymic = _view.Patronymic;
             reader.IDTYPE = _view.IDTYPE;
             reader.NameType = _view.NameType;
+            reader.PlaceReader = _view.PlaceReader;
         }
 
         public void LoadView() {
@@ -64,7 +71,8 @@ namespace WF_Aworkplace.Controller
         }
 
         public void AddReader() {
-            _selectedReader = new TypeReader(0,0,"","","",DateTime.Now,0,"","");
+            ReleaseData r = new ReleaseData();
+            _selectedReader = new TypeReader(r.getNextId(Reader.pathFileReaderString),r.getNextIdCard(Reader.pathFileReaderString),"Введите фамилию","Введите имя","введите отчество",DateTime.Now,1,"Выберите","Выберите");
             updateViewDetailValues(_selectedReader);
             _view.isModify = true;
         }
@@ -89,7 +97,8 @@ namespace WF_Aworkplace.Controller
                 if (newSelectedIndex > -1 && newSelectedIndex < _readers.Count) {
                     _view.SetSelectedReaderInGrid((TypeReader)_readers[newSelectedIndex]);
                 }
-            }            
+            }
+
         }
 
         public void Save() { 

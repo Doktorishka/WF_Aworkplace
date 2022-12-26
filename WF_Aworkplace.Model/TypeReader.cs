@@ -14,7 +14,7 @@ namespace WF_Aworkplace.Model
             get => idType;
             set
             {
-                if (!GetType().Equals(typeof(int))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(Int32))) throw new ArgumentException($"Не соответсвие типов данных! Вместо Int32 - введено {GetType()}");
                 if (value < 0) throw new ArgumentException("Введено отрицательное число, что не приемлемо для Идентификатора!");
                 if (value > Int32.MaxValue) throw new ArgumentException("Введено число, переполняющее 4 байта!");
                 idType = value;
@@ -26,7 +26,7 @@ namespace WF_Aworkplace.Model
             get => nameType;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(String))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 nameType = value;
@@ -38,7 +38,7 @@ namespace WF_Aworkplace.Model
             get => placeReader;
             set
             {
-                if (!GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
+                if (!value.GetType().Equals(typeof(string))) throw new ArgumentException($"Не соответсвие типов данных! Вместо String - введено {GetType()}");
                 if (value == "" || value == String.Empty) throw new ArgumentException("Введено пустое поле!");
                 if (value == null) throw new ArgumentNullException("Введено нулевое значения поля!");
                 placeReader = value;
@@ -53,6 +53,7 @@ namespace WF_Aworkplace.Model
             NameType = nameType;
             PlaceReader = placeReader;
         }
+        public static string pathTypeReader = "../../../WF_Aworkplace.Data/Files/TypeReader.txt";
 
         ~TypeReader() { }
     }

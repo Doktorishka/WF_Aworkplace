@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_Aworkplace.Data", "WF_Aw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_Aworkplace.Controller", "WF_Aworkplace.Controller\WF_Aworkplace.Controller.csproj", "{B9EC054B-DD02-4565-AD49-A0CC3726C3BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_Aworkplace.View", "WF_Aworkplace.View\WF_Aworkplace.View.csproj", "{B177C984-5070-4B8B-B840-B31D1ECA707B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_Aworkplace.Views", "WF_Aworkplace.Views\WF_Aworkplace.Views.csproj", "{8D06318C-8A9B-428A-B4A0-94888D465F03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B9EC054B-DD02-4565-AD49-A0CC3726C3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EC054B-DD02-4565-AD49-A0CC3726C3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9EC054B-DD02-4565-AD49-A0CC3726C3BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B177C984-5070-4B8B-B840-B31D1ECA707B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B177C984-5070-4B8B-B840-B31D1ECA707B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B177C984-5070-4B8B-B840-B31D1ECA707B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B177C984-5070-4B8B-B840-B31D1ECA707B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D06318C-8A9B-428A-B4A0-94888D465F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D06318C-8A9B-428A-B4A0-94888D465F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D06318C-8A9B-428A-B4A0-94888D465F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D06318C-8A9B-428A-B4A0-94888D465F03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,6 +49,6 @@ namespace WF_Aworkplace.Model
             NameType = nameType;
         }
 
-        public static string pathTypeLiterature = "../../../Files/TypeLiterature.txt";
+        public static string pathTypeLiterature = "../../../WF_Aworkplace.Data/Files/TypeLiterature.txt";
     }
 }

@@ -7,15 +7,15 @@ using WF_Aworkplace.Model;
 
 namespace WF_Aworkplace.Controller.Interfaces
 {
-    public interface IReadersView
+    public interface ILiteraturesView
     {
         void ClearGrid();
-        void AddReaderToGrid(TypeReader reader);
-        void UpdateGridWithChangedReader(TypeReader reader);
-        void RemoveReaderFromGrid(TypeReader reader);
-        void SetSelectedReaderInGrid(TypeReader reader);
-        void SetController(ReaderListController controller);
-        int GetIdOfSelectedUserInGrid();
+        void AddLiteratureToGrid(TypeLiterature reader);
+        void UpdateGridWithChangedReader(TypeLiterature reader);
+        void RemoveLiteratureFromGrid(TypeLiterature reader);
+        void SetSelectedLiteratureInGrid(TypeLiterature reader);
+        void SetController(LiteratureListController controller);
+        int GetIdOfSelectedLiteratureInGrid();
         bool isIdValidation(int id);
 
         int ID { get; set; }
@@ -30,6 +30,5 @@ namespace WF_Aworkplace.Controller.Interfaces
         bool isModify { set; }
 
         Dictionary<int, string> getType(string path);
-
     }
 }
