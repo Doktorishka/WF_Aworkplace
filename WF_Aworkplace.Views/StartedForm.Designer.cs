@@ -62,7 +62,7 @@
             this.btnInputLiterature.TabIndex = 0;
             this.btnInputLiterature.Text = "Принять литературу";
             this.btnInputLiterature.UseVisualStyleBackColor = true;
-            this.btnInputLiterature.Click += new System.EventHandler(this.buttonListReader_Click);
+            this.btnInputLiterature.Click += new System.EventHandler(this.btnInputLiterature_Click);
             // 
             // outputLiterature
             // 

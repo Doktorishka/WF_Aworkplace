@@ -36,7 +36,7 @@ namespace WF_Aworkplace.Views
             dataOutputLiterature.Columns[1].HeaderText = "Наименование экземпляра";
             dataOutputLiterature.Columns[2].HeaderText = "Дата сдачи";
 
-            string[] allType = File.ReadAllLines("../../../Files/TypeLiterature.txt");
+            string[] allType = File.ReadAllLines(TypeLiterature.pathTypeLiterature);
             foreach (string type in allType)
             {
                 string[] objectType = type.Split(';');
@@ -52,7 +52,7 @@ namespace WF_Aworkplace.Views
             allReaders.Clear();
             dataReader.Rows.Clear();
 
-            string[] allLiterature = File.ReadAllLines("../../../Files/Literature.txt");
+            string[] allLiterature = File.ReadAllLines(Literature.pathLiterature);
             foreach (string literString in allLiterature)
             {
                 string[] line = literString.Split(';');
@@ -72,7 +72,7 @@ namespace WF_Aworkplace.Views
             }
 
 
-            string[] allReader = File.ReadAllLines("../../../Files/Readers.txt");
+            string[] allReader = File.ReadAllLines(Reader.pathFileReaderString);
             foreach (string readerString in allReader)
             {
                 string[] line = readerString.Split(';');
@@ -98,7 +98,7 @@ namespace WF_Aworkplace.Views
                 dataReader.Rows[i].HeaderCell.Value = allReaders[i].IDCARD.ToString();
             }
 
-            string[] allOutputLiterature = File.ReadAllLines("../../../Files/OutputLiterature.txt");
+            string[] allOutputLiterature = File.ReadAllLines("../../../WF_Aworkplace.Data/Files/OutputLiterature.txt");
 
             foreach (var all in allOutputLiterature)
             {
