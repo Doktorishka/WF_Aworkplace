@@ -36,9 +36,9 @@
             // 
             // buttonListReader
             // 
-            this.buttonListReader.Location = new System.Drawing.Point(322, 50);
+            this.buttonListReader.Location = new System.Drawing.Point(211, 29);
             this.buttonListReader.Name = "buttonListReader";
-            this.buttonListReader.Size = new System.Drawing.Size(123, 42);
+            this.buttonListReader.Size = new System.Drawing.Size(169, 77);
             this.buttonListReader.TabIndex = 0;
             this.buttonListReader.Text = "Список читателей";
             this.buttonListReader.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // btnListLiterature
             // 
-            this.btnListLiterature.Location = new System.Drawing.Point(161, 50);
+            this.btnListLiterature.Location = new System.Drawing.Point(41, 29);
             this.btnListLiterature.Name = "btnListLiterature";
-            this.btnListLiterature.Size = new System.Drawing.Size(123, 42);
+            this.btnListLiterature.Size = new System.Drawing.Size(164, 77);
             this.btnListLiterature.TabIndex = 0;
             this.btnListLiterature.Text = "Список литературы";
             this.btnListLiterature.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // 
             // btnInputLiterature
             // 
-            this.btnInputLiterature.Location = new System.Drawing.Point(161, 135);
+            this.btnInputLiterature.Location = new System.Drawing.Point(41, 112);
             this.btnInputLiterature.Name = "btnInputLiterature";
-            this.btnInputLiterature.Size = new System.Drawing.Size(123, 42);
+            this.btnInputLiterature.Size = new System.Drawing.Size(164, 74);
             this.btnInputLiterature.TabIndex = 0;
             this.btnInputLiterature.Text = "Принять литературу";
             this.btnInputLiterature.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // outputLiterature
             // 
-            this.outputLiterature.Location = new System.Drawing.Point(322, 135);
+            this.outputLiterature.Location = new System.Drawing.Point(211, 112);
             this.outputLiterature.Name = "outputLiterature";
-            this.outputLiterature.Size = new System.Drawing.Size(123, 42);
+            this.outputLiterature.Size = new System.Drawing.Size(169, 74);
             this.outputLiterature.TabIndex = 0;
             this.outputLiterature.Text = "Выдать литературу";
             this.outputLiterature.UseVisualStyleBackColor = true;
@@ -78,11 +78,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 404);
+            this.ClientSize = new System.Drawing.Size(435, 219);
             this.Controls.Add(this.outputLiterature);
             this.Controls.Add(this.btnInputLiterature);
             this.Controls.Add(this.btnListLiterature);
             this.Controls.Add(this.buttonListReader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StartedForm";
             this.Text = "StartedForm";
             this.ResumeLayout(false);
